@@ -43,21 +43,21 @@ class _Log extends State<Log> {
                 child: CircularProgressIndicator(),
               )
             : RefreshIndicator(
-                onRefresh: ()=>_fetchData(),
+                onRefresh: () => _fetchData(),
                 child: ListView.builder(
-                itemCount: list.length,
-                itemBuilder: (BuildContext context, int index) {
-                  return ListTile(
-                      contentPadding: EdgeInsets.all(10),
-                      title: new Row(
-                        mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-                        children: <Widget>[
-                          new Text(list[index].garageDoor),
-                          new Text(list[index].openClose),
-                          new Text(list[index].dateTime),
-                        ],
-                      ));
-                },
-              )));
+                  itemCount: list.length,
+                  itemBuilder: (BuildContext context, int index) {
+                    return ListTile(
+                        contentPadding: EdgeInsets.all(10),
+                        title: new Row(
+                          mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                          children: <Widget>[
+                            new Text(list[index].garageDoor),
+                            new Text(list[index].openClose),
+                            new Text(list[index].dateTime),
+                          ],
+                        ));
+                  },
+                )));
   }
 }
